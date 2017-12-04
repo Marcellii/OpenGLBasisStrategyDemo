@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OpenGLBasisStrategyDemo
+namespace OpenGLBasisStrategyDemo.Views
 {
-    public partial class Form1 : Form
+    public partial class TGui : Form
     {
-        public Form1()
+        TView oglView;
+
+        public TGui()
         {
+            oglView = new TView();
+
             InitializeComponent();
+
+            oglView.Dock = DockStyle.Fill;
+
+            pnlTGui.Controls.Add(oglView);
+
+            pnlTGui.Focus();
         }
     }
 }

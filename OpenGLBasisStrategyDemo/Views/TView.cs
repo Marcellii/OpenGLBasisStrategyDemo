@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using CsGL.OpenGL;
 using System.Windows.Forms;
-using OpenGL;
+
 
 namespace OpenGLBasisStrategyDemo.Views
 {
-    public partial class TView : GlControl
+    public partial class TView : OpenGLControl
     {
         /// <summary>
         /// hier wird gezeichnet
@@ -23,15 +22,16 @@ namespace OpenGLBasisStrategyDemo.Views
             // und kippen nach Oben
 
             //coordinateSystem(2);
-            Gl.Translate(0.0, 0.0, -6.0);
 
-            Gl.Rotate(-60, 1, 0, 0);
+            GL.glTranslated(0.0, 0.0, -6.0);
+
+            GL.glRotated(-60, 1, 0, 0);
             //coordinateSystem(0.5);
 
             coordinateSystem(1);
 
             // Zylinderobjekt erzeugen
-            Gl.c
+            GLUquadric zylinder = GL.gluNewQuadric();
 
             // Zeicheneigenschaften einstellen:
             // Drahtgittermodell

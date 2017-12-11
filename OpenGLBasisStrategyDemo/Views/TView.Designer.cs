@@ -1,6 +1,15 @@
-﻿namespace OpenGLBasisStrategyDemo.Views
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using CsGL.OpenGL;
+using System.Windows.Forms;
+
+namespace OpenGLBasisStrategyDemo.Views
 {
-    partial class TView : OpenGL.GlControl
+    partial class TView : OpenGLControl
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +38,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Text = "TView";
         }
 

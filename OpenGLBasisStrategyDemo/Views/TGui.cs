@@ -12,16 +12,13 @@ namespace OpenGLBasisStrategyDemo.Views
 {
     public partial class TGui : Form
     {
-        TView oglView;
+        TView oglView = new TView();
 
         public TGui()
         {
-            oglView = new TView();
-
             InitializeComponent();
 
             oglView.Dock = DockStyle.Fill;
-
             pnlTGui.Controls.Add(oglView);
 
             pnlTGui.Focus();
